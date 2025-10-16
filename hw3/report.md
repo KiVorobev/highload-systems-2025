@@ -135,7 +135,7 @@ protocol rip rip1 {
 
 Вероятно это связано с тем, что ``bird.conf`` написан не совсем корректно:
 
-![syntax_error](syntax_error.png)
+![syntax_error](img/syntax_error.png)
 
 Но исправить файл так, чтобы данная ошибка ушла - не получилось
 
