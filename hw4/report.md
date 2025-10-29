@@ -247,4 +247,37 @@ Hypertext Transfer Protocol
     [Request URI: http://backend/]
     File Data: 40 bytes
 Line-based text data: text/html (1 lines)
+
+Frame 19: 310 bytes on wire (2480 bits), 310 bytes captured (2480 bits) on interface any, id 0
+Linux cooked capture v1
+Internet Protocol Version 4, Src: 127.0.0.1, Dst: 127.0.0.1
+Transmission Control Protocol, Src Port: 8888, Dst Port: 52550, Seq: 1, Ack: 78, Len: 242
+Hypertext Transfer Protocol
+    HTTP/1.1 200 OK\r\n
+        [Expert Info (Chat/Sequence): HTTP/1.1 200 OK\r\n]
+            [HTTP/1.1 200 OK\r\n]
+            [Severity level: Chat]
+            [Group: Sequence]
+        Response Version: HTTP/1.1
+        Status Code: 200
+        [Status Code Description: OK]
+        Response Phrase: OK
+    Server: nginx/1.24.0 (Ubuntu)\r\n
+    Date: Wed, 29 Oct 2025 22:14:31 GMT\r\n
+    Content-Type: text/html\r\n
+    Content-Length: 40\r\n
+        [Content length: 40]
+    Connection: keep-alive\r\n
+    Last-Modified: Wed, 29 Oct 2025 19:25:02 GMT\r\n
+    \r\n
+    [HTTP response 1/1]
+    [Time since request: 0.005415853 seconds]
+    [Request in frame: 4]
+    [Request URI: http://127.0.0.1:8888/]
+    File Data: 40 bytes
+Line-based text data: text/html (1 lines)
 ```
+
+Наблюдаем за портами 8081, 8082 и 8888. 8888 получает запрос, проксирует его на 8081 и добавляет заданный header.
+
+Далее ответ с порта 8081 на 8888 и возвращение ответа.
